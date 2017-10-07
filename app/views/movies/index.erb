@@ -1,0 +1,23 @@
+<h3>Search Results</h3>
+
+<ol>
+	<% @movies.each do |movie| %>
+		<li>
+			<h4><%= movie.title %></h4>
+
+			<img src="http://image.tmdb.org/t/p/w300/<%= movie.image_url %>" aalt="<%= movie.title %>" />
+
+			<p>
+				<%= movie.synopsis %>
+			</p>
+
+			<dl>
+				<dt>Year</dt>
+				<dd><%= movie.year %></dd>
+
+				<dt>Rating</dt>
+				<dd><%= movie.rating %></dd>
+			</dl>
+		</li>
+	<% end %>
+</ol>

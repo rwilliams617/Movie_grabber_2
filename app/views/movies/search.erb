@@ -1,0 +1,9 @@
+<h1>My Amazing Movie Search</h1>
+
+<fieldset>
+	<% form_tag '/movies', :method => :get do %>
+		<%= label_tag "search" %>
+		<%= text_field_tag :query, class: "form-control" %>
+		<%= submit_tag "Search", class: "btn btn-primary" %>
+	<% end %>	
+</fieldset>
